@@ -3,118 +3,219 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Vikas | Dev</title>
-    <link rel="shortcut icon" href="images/favicon-standard.png" type="image/x-icon">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
-        crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="static/style.css">
+    <!-- Review this part and modify it to your liking -->
+    <meta name="description" content="Sample text for portfolio template meta tag">
+    <meta name="keywords" content="Sample text for portfolio template meta tag">
+    <meta name="author" content="Sample text for portfolio template meta tag">
+    <title>My portfolio website</title>
+    <!-- Adding favicon for older and modern browsers,
+        It is best to add favicon to the main folder, 
+        I used an only ico converter for best result,
+        Do not forget to clear you cache to see the changes -->
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <!-- font for the quote -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Covered+By+Your+Grace&display=swap" rel="stylesheet">
+    <!-- font for the body -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400&display=swap" rel="stylesheet">
+    <!-- font for headings -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400&display=swap" rel="stylesheet">
 </head>
 
 <body>
-    <div class="container p-2">
-        <nav class="p-2 d-flex">
-            <div class="flex-shrink-0">
-                <ul class="list-unstyled p-2">
-                    <li class="mb-1 p-4">
-                        <a href="#about">About</a>
+    <!-- navigation bar -->
+    <nav class="sticky">
+        <label for="drop" class="toggle" id="main-toggle">
+            <span class="nav-icon"></span>
+        </label>
+        <input type="checkbox" id="drop">
+        <ul class="main-nav">
+            <!-- <li><a href="index.html">Home</a></li>
+            <li><a href="about-me.html">About me</a></li>
+            <li><a href="skill-set.html">Skill-set</a></li>
+            <li><a href="portfolio.html">Portfolio</a></li>
+            <li><a href="#contact-me">Contact me</a></li> -->
+        </ul>
+    </nav>
+
+    <!-- introduction -->
+    <header class="grid-system-2 w-900 padding">
+        <section class="align-center">
+            <h1 class="medium-spacing">Hello, I am</h1>
+            <h1 class="large">Vikas</h1>
+            <p class="justify">A software developer with five years of experience. Have worked with early startups and large MNC. <br>
+                Currently looking for remote oppurtunity in Web/AI.
+            </p>
+        </section>
+        <section class="center align-center">
+            <img class="header-img max-width max-height" src="assets/my-image.jpg" alt="profile-picture">
+        </section>
+    </header>
+
+
+    <!-- quote -->
+    <article class="baby-pink">
+        <p class="quote uppercase">What I cannot create, I do not understand.</p>
+        <p>Richard Feynman.</p>
+    </article>
+
+    <!-- about me -->
+    <!-- That about me png is something I've made for fun, it has a purple version too, feel free to use it or change it to anything else. -->
+    <section class="wrapper">
+        <section class="margin-auto">
+            <img class="max-width max-height" src="assets/about-me-new.png" alt="about-me-logo">
+        </section>
+        <section class="justify align-center">
+            <p class="bold">About me</p>
+            <p>I have been working on technical roles in backend using Django, FastAPI and frontend using Vue and Angular.</p>
+            <p>My role in last company was that of a technical lead, where I was tasked with reviewing project codes, 
+                giving technical feedback on the projects. I also worked on computer vision and RAG applications, where 
+                I helped in improving the accuracy of output and optimized perfomance using asynchronous programming.</p>
+            <p>I am a fun loving guy, who is ever available in crisis and I love to see juniors and interns grow under me. </p>
+            <p class="padding-top"><a href="about-me.html" class="button-outline">More info</a></p>
+        </section>
+    </section>
+
+    <!-- skills -->
+    <!-- use this to showcase your skills, if you make changes, do not forget to modify the css accordingly -->
+    <section>
+        <h3 class="main-title center padding">Skills</h3>
+    </section>
+    <section class="wrapper">
+        <section class="column">
+            <p class="padding-bottom">Technical skills</p>
+            <section class="skills">
+                <ul class="no-bullet-list no-padding-list-item">
+                    <li>
+                        <p>Python (Django/FastAPI/Flask)</p>
+                        <span class="progress-bar"><span class="html"></span></span>
                     </li>
-                    <li class="mb-1 p-4">
-                        <a href="#skills">Skills</a>
+                    <li>
+                        <p>JS/TS (Vue, Angular)</p>
+                        <span class="progress-bar"><span class="css"></span></span>
                     </li>
-                    <li class="mb-1 p-4">
-                        <a href="#experience">Experience</a>
+                    <li>
+                        <p>PostrgeSQL</p>
+                        <span class="progress-bar"><span class="javascript"></span></span>
                     </li>
-                    <li class="mb-1 p-4">
-                        <a href="#contact">Contact</a>
+                    <li>
+                        <p>Machine Learning</p>
+                        <span class="progress-bar"><span class="php"></span></span>
                     </li>
                 </ul>
-            </div>
-        </nav>
+            </section>
+        </section>
+        <section class="column">
+            <p class="padding-bottom">Professional skills</p>
+            <section class="skills">
+                <ul class="no-bullet-list no-padding-list-item">
+                    <li>
+                        <p>communication</p>
+                        <span class="progress-bar"><span class="comm-adapt"></span></span>
+                    </li>
+                    <li>
+                        <p>teamplayer, adaptability</p>
+                        <span class="progress-bar"><span class="team-player"></span></span>
+                    </li>
+                    <li>
+                        <p>problem solving</p>
+                        <span class="progress-bar"><span class="problem-solving"></span></span>
+                    </li>
+                    <li>
+                        <p>open-minded</p>
+                        <span class="progress-bar"><span class="open-minded"></span></span>
+                    </li>
+                </ul>
+            </section>
+        </section>
+    </section>
+    </section>
 
-        <main class="p-2">
-            <article class="d-flex flex-column m-2" style="border-radius: 3px;">
-                <img src="images/my-image.jpg" alt="logo" width="150" id="mainImage">
-            </article>
-            <hr>
+    <!-- Projects -->
+    <!-- If you have more projects you are working on at the moment, or just want to show more, double the whole section below without the title and you are good to go -->
+    <section>
+        <h3 class="main-title center padding">Side projects I am currently working on</h3>
+    </section>
+    <section class="wrapper">
+        <section class="column card justify flex">
+            <img class="box" src="assets/library.png" alt="project1">
+            <p class="padding bold center">Local Library</p>
+            <p>A community library application for searching and borrowing books.</p>
+            <p>Built using Django DRF and Vue frameworks. One can borrow books for a fixed period, librarians can view, update books availability.</p>
+            <p class="padding-top bottom"><a href="http://13.201.20.174/" class="button-outline">Check</a></p>
+        </section>
+        <section class="column card justify flex">
+            <img class="box" src="assets/project2.png" alt="project2">
+            <p class="padding bold center">Karma</p>
+            <p>An self help application to keep track of my daily activities and task.</p>
+            <p>This application helps me manage my daily activities and also keeps track of how I am spending my time. 
+                It is built using Django and Vue along with Celery for running some periodic tasks.</p>
+            <p class="padding-top bottom"><a href="https://github.com/vikassrivastava18/Karma" class="button-outline">Code</a></p>
+        </section>
 
-            <div class="my-4" id="about">
-            <h4>About</h4>
-            <p>Hey there <span aria-label="waving hand" role="img">👋</span>, I'm a developer based in India with more than 5 years of experience.
-            </p>
-            <blockquote>
-                <i>
-                What I cannot create, I do not understand - Richard Feynman
-                </i>
-            </blockquote>
-            </div>
+    </section>
 
-            <div class="my-4 " id="skills">
-            <h4>Skills</h4>
-            <article class="row mt-4 justify-content-between" id="skillDiv">
+    <!-- contact me -->
+    <!-- Five logo can be in one row, and if it still not enough, you can create another row, buy doubleing the "box-contact" section -->
+    <section id="contact-me" class="grid-system-2 w-900 padding">
+        <section class="margin-auto">
+            <img class="max-width max-height" src="assets/communicate.png" alt="contact-me-illustration">
+        </section>
+        <section class="margin-auto align-center">
+            <h1 class="medium-spacing center">Let's get in touch!<span></span></h1>
+            <section class="box-contact margin-auto padding-top">
+                <span>
+                    <a href="https://www.linkedin.com/in/vikas-srivastava-42a5356a/" target="_blank"><img class="logo" src="assets/linkedin.png"
+                            alt=""></a>
+                </span> &nbsp;&nbsp;
+                <span>
+                    <a href="https://github.com/vikassrivastava18" target="_blank"><img class="logo" src="assets/github.png" alt=""></a>
+                </span>
+                <!-- <span>
+                    <a href="vikassrinitb@gmail.com" target="_blank"><img class="logo" src="assets/email.png" alt=""></a>
+                </span> -->
+            </section>
+        </section>
+    </section>
 
-                <figure class="figure col-lg-3 col-md-6 col-sm-12">
-                <h6>Python/JS/TS</h6>
-                <figcaption class="figure-caption">Programming languages</figcaption>
-                </figure>
+    <!-- special thanks -->
+    <!-- Here you can see the free resources I've used for the logos and illustrations. Do not forget to give credit to the creators of the free stuffs use may use additionally -->
+    <section>
+        <p class="small thanks justify w-900 padding-left">*Thanks for the illustration:
+            <a class="link colorful-letter" href="https://storyset.com/work" target="_blank">work illustrations</a> by
+            Storyset
 
-                <figure class="figure col-lg-3 col-md-6 col-sm-12">
-                <h6>Django/Flask</h6>
-                <figcaption class="figure-caption">Backend frameworks</figcaption>
-                </figure>
+        </p>
+        <p class="small thanks justify w-900 padding-left">*Thanks for the icons:
+            <span><a class="link colorful-letter" href="https://www.iconfinder.com/Flatart" target="_blank">flatart,
+                </a></span>
+            <span><a class="link colorful-letter" href="https://www.iconfinder.com/font-awesome" target="_blank">font
+                    awesome, </a></span>
+            <span><a class="link colorful-letter" href="https://www.iconfinder.com/fluent-designsystem"
+                    target="_blank">microsoft, </a></span>
+            <span><a class="link colorful-letter" href="https://www.iconfinder.com/Chanut-is" target="_blank">chanut is
+                    indurstries, </a></span>
+            <span><a class="link colorful-letter" href="https://www.iconfinder.com/Kalashnyk" target="_blank">kalash
+                </a></span>
+            on Iconfinder
+        </p>
+    </section>
 
-                <figure class="figure col-lg-3 col-md-6 col-sm-12">
-                <h6>Vue/Angular</h6>
-                <figcaption class="figure-caption">Frontend frameworks</figcaption>
-                </figure>
-                <figure class="figure col-lg-3 col-md-6 col-sm-12">
-                <h6>ML/DL</h6>
-                <figcaption class="figure-caption">Machine Learning</figcaption>
-                </figure>
-                <figure class="figure col-lg-3 col-md-6 col-sm-12">
-                <h6>Linux/Docker/GIT</h6>
-                <figcaption class="figure-caption">Devops</figcaption>
-                </figure>
-            </article>
-            </div>
-
-            <div class="mt-4">
-            <h4>Experience</h4>
-            <article class="row mt-4 justify-content-between" id="experience">
-                <figure class="figure col-lg-3 col-md-6 col-sm-12">
-                <h6>Software engineer</h6>
-                <figcaption class="figure-caption">Chetu, May 2022 - Present</figcaption>
-                </figure>
-
-
-                <figure class="figure col-lg-3 col-md-6 col-sm-12">
-                <h6>Software engineer</h6>
-                <figcaption class="figure-caption">FuriousFox, January 2022 - February 2023</figcaption>
-                </figure>
-
-                <figure class="figure col-lg-3 col-md-6 col-sm-12">
-                <h6>Web developer (Django)</h6>
-                <figcaption class="figure-caption">VirtualWebs - August 2020 - January 2022</figcaption>
-                </figure>
-
-            </article>
-            </div>
-
-            <div id="contact" class="mt-4">
-            <h4>Contact</h4>
-            <p>Email: <i>vikassrinitb@gmail.com,</i>  &nbsp;
-                <i><a href="https://www.linkedin.com/in/vikas-srivastava-42a5356a/" target="_blank">LinkedIn,
-                </a></i>  &nbsp;
-                <i><a href="https://github.com/vikassrivastava18" target="_blank">Github.</a></i>
-            </p>
-            </div>
-        </main>
-    </div>
+    <!-- footer -->
+    <!-- waits for you to take over! -->
+    <footer>@iluskaland 2024</footer>
 </body>
 
 </html>
-
